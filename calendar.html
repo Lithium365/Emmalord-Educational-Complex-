@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ADMISSIONS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <style>
+ 
+    body {
+      font-size: 16px;
+    }
+    
+    /* Larger font size for desktop screens */
+    @media only screen and (min-width: 768px) {
+      body {
+        font-size: 25px;
+      }
+    
+      h1 {
+        font-size: 36px; /* Example: Larger heading font size for desktop */
+      }
+    
+      h2 {
+        font-size: 24px; /* Example: Larger subheading font size for desktop */
+      }
+      
+      .navbar {
+        background-color: #00322e;
+        display: flex;
+        color: white;
+        text-align: none;
+        font-size: 50px;
+        font-weight: 900;
+        align-items: center; /* Align items vertically in the center */
+      }
+    }
+    
+    </style>
+  <body>
+    <style>
+      .navbar {
+        overflow: hidden;
+        background-color: #333;
+        position: relative;
+        padding: auto;
+      }
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 07px;
+        text-decoration: none;
+        position: relative;
+      }
+      .navbar a:hover {
+        background-color: #f7f3f3;
+        color: rgb(5, 5, 5);
+      }
+      .datetime {
+        color: #ccc;
+      }
+      .datetime {
+        padding: 12px 12px;
+      }
+      .footer-container {
+        position: relative;
+      }
+
+      .footer {
+        background: url("20230914_120439.jpg") center/cover;
+        color: rgb(253, 252, 252);
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        animation: slideshow 15s infinite linear; /* Adjust the time for each slide */
+        height: 450px; /* Adjust the height of the slideshow footer */
+      }
+
+      @keyframes slideshow {
+        0%,
+        100% {
+          background: rgba(12, 12, 12, 0.7) url("20230914_120439.jpg")
+            center/cover;
+        }
+        25% {
+          background: rgba(5, 5, 5, 0.7) url("20230914_115828.jpg") center/cover;
+        }
+        50% {
+          background: rgba(23, 23, 23, 0.7) url("20230914_114602.jpg")
+            center/cover;
+        }
+        75% {
+          background: rgba(120, 17, 17, 0.7) url("20230914_115828.jpg")
+            center/cover;
+        }
+      }
+
+      .footer-section {
+        flex: 8px;
+        max-width: 600px;
+        margin: 0.5px 1px;
+      }
+
+      .footer-section h3 {
+        color: #fdfdfd;
+        font-size: 1.5em; /* Adjust the font size as needed */
+      }
+
+      .footer-section a {
+        color: rgb(250, 250, 250);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        margin: 1px 0;
+        font-size: 1.2em; /* Adjust the font size as needed */
+      }
+
+      .footer-section.explore a::before,
+      .footer-section.quick-links a::before {
+        content: "\25A0";
+        color: rgb(10, 10, 10);
+        font-size: 14px;
+        margin-right: 5px;
+        display: inline-block;
+        font-style: bold;
+      }
+
+      .footer-section a:hover {
+        text-decoration: underline;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    
+    
+     
+    
+      
+      .hamburger-menu {
+        display: none; /* hide hamburger menu initially */
+        cursor: pointer;
+        font-size: 30px;
+        z-index: 2;
+      }
+  
+      .navbar {
+        background-color: #00322e;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: left;
+        color: white;
+      }
+  
+      .logo {
+        display: flex;
+        align-items: left;
+      }
+  
+      .logo img {
+        width: 40px; 
+        height: 40px;
+        margin-right: 1px; /* add spacing between logo and school name */
+        margin-top: 1px;
+      }
+  
+      .nav-list {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+  
+      .nav-list li {
+        margin-right: 70px;
+      }
+  
+      .nav-list a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+        padding-right: 10%;
+      }
+  
+      .date-time {
+        color: white;
+      }
+      @media only screen and (max-width: 768px) and (max-device-width: 768px) {
+        .logo span {
+          font-size: 9px; /* Adjust the font size for Android devices */
+        }
+      
+      }
+      @media only screen and (max-width: 768px) and (max-device-width: 768px) {
+        .date-time {
+          font-size: 0.5em;
+          margin: 10px; /* Adjust the font size for Android devices */
+        }
+      
+      }
+      .hamburger-menu {
+        display: none; /* hide hamburger menu initially */
+        cursor: pointer;
+        font-size: 30px;
+        z-index: 2;
+      }
+  
+      @media only screen and (max-width: 768px) {
+        .nav-list {
+          display: none; /* hide nav links on small screens */
+          flex-direction: column;
+          position: absolute;
+          top: 70px;
+          left: 0;
+          width: 100%;
+          background-color: #333;
+          z-index: 1;
+        }
+  
+        .nav-list.show {
+          display: flex; 
+        }
+  
+        .nav-list li {
+          margin: 10px;
+        }
+  
+        .hamburger-menu {
+          display: block; 
+        }
+  
+        .logo span {
+          font-size: 2vw;
+          margin-top: 1%; 
+          font-size: 19px;
+        }
+      }
+  
+      @media only screen and (min-width: 769px) {
+        .logo span {
+          font-size: 50px; 
+        }
+      }
+      
+    </style>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="Emmalord.png" alt="Logo" />
+        <span>Emmalord Educational Complex</span>
+      </div>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ADMISSIONS.HTML">Admission</a></li>
+        <li><a href="GALLERY.HTML">Gallery</a></li>
+        <li><a href="ABOUT  US.HTML">About Us</a></li>
+        <li><a href="STAFF.HTML">Staff</a></li>
+      </ul>
+      <div class="date-time">
+        <p id="current-date-time"></p>
+      </div>
+      <div class="hamburger-menu">&#9776;</div>
+    </nav>
+      </div>
+     
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburgerMenu = document.querySelector(".hamburger-menu");
+        const navList = document.querySelector(".nav-list");
+        hamburgerMenu.addEventListener("click", function () {
+          navList.classList.toggle("show");
+        });
+        function updateTime() {
+          const currentDateAndTime =
+            document.getElementById("current-date-time");
+          const options = {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+            second: "numeric",
+            hour12: true,
+          };
+          const currentDateTime = new Date()
+            .toLocaleString(undefined, options)
+            .replace(" at", ""); 
+          currentDateAndTime.textContent = currentDateTime;
+        }
+        updateTime();
+  
+        setInterval(updateTime, 1000);
+      });
+    </script>
+
+
+        <!-- Upcoming Events Section -->
+        <div class="events-section">
+          <h2>Upcoming Events</h2>
+          <p>
+            Stay tuned for exciting events and activities at Emmalord
+            Educational Complex.
+          </p>
+          <!-- Add specific event details or a calendar if applicable -->
+        </div>
+        <div class="footer-container">
+          <!-- Slideshow Footer -->
+          <div class="footer">
+            <div class="footer-section">
+              <div class="logo">
+                <img src="Emmalord.jpg" alt="Logo" />
+              </div>
+              <div class="contact-info">
+                <p>Contact Information:</p>
+                <p>
+                  <a href="mailto:brempongkumi1@gmail.com"
+                    >Email: emmalordeducation7@gmail.com</a
+                  >
+                </p>
+                <p>Location: Sunyani-Dumasua</p>
+                <p>Call us on: <a href="tel:0534655641">0534655641</a></p>
+              </div>
+            </div>
+    
+            <div class="footer-section explore">
+              <h3>Explore</h3>
+              <a href="#">Home</a>
+              <a href="#">About Us</a>
+              <a href="#">Equiries</a>
+              <a href="#">Contact</a>
+            </div>
+    
+            <div class="footer-section quick-links">
+              <h3>Quick Links</h3>
+              <a href="#">Clubs</a>
+              <a href="#">SRC</a>
+              <a href="#">Complains</a>
+            </div>
+    
+            <div class="footer-section">
+              <h3>Connect with Us</h3>
+              <div class="social-icons">
+                <a
+                  href="https://web.facebook.com/profile.php?id=100072368995853"
+                  target="_blank"
+                  ><i class="fa fa-facebook"></i
+                ></a>
+                <a href="https://twitter.com/KumiObrempong" target="_blank"
+                  ><i class="fa fa-twitter"></i
+                ></a>
+                <a href="https://www.instagram.com/anibrekumi/" target="_blank"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+                <a
+                  href="https://wa.link/xkyqb1"
+                  target="_blank"
+                  class="fa fa-whatsapp"
+                ></a>
+    
+                <!-- Add more social media icons as needed -->
+              </div>
+            </div>
+    
+            <div class="copyright">&copy; 2023 Emmalord Educational Complex</div>
+          </div>
+        </div>
+      
+  
+  </body>
+</html>

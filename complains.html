@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Complains</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+<!-- Latest compiled and minified CSS -->
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  crossorigin="anonymous"
+>
+
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <style>
+    h1{
+      font-size: 17px;
+    }
+  </style>
+  <style>
+ 
+    body {
+      font-size: 16px;
+    }
+    
+    /* Larger font size for desktop screens */
+    @media only screen and (min-width: 768px) {
+      body {
+        font-size: 25px;
+      }
+    
+      h1 {
+        font-size: 36px; /* Example: Larger heading font size for desktop */
+      }
+    
+      h2 {
+        font-size: 24px; /* Example: Larger subheading font size for desktop */
+      }
+      
+      .navbar {
+        background-color: #00322e;
+        display: flex;
+        color: white;
+        text-align: none;
+        font-size: 45px;
+        font-weight: 900;
+        align-items: center; /* Align items vertically in the center */
+      }
+    }
+    
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="Emmalord.png" alt="Logo" />
+        <span>Emmalord Educational Complex</span>
+      </div>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+      <li><a href="ADMISSIONS.HTML">Admission</a></li>
+      <li><a href="GALLERY.HTML">Gallery</a></li>
+      <li><a href="ABOUT  US.HTML">About Us</a></li>
+      <li><a href="STAFF.HTML">Staff</a></li>
+      <li><a href="anouncement.html">Anouncement</a></li>
+
+      </ul>
+      <div class="date-time">
+        <p id="current-date-time"></p>
+      </div>
+      <div class="hamburger-menu">&#9776;</div>
+    </nav>
+      </div>
+     
+  
+      <div class="apology-message">
+        <h1>We Apologize for Any Inconvenience</h1>
+        <p>
+            Dear Parents and Guardians,
+        </p>
+        <p>
+            We sincerely apologize if you have encountered any issues or concerns. Your feedback is important to us, and we
+            appreciate your patience and understanding. Please use the form below to share your complaints or concerns with
+            us. Our team will address them promptly to ensure a positive experience for you and your child.
+        </p>
+        <p>
+            Thank you for your understanding and for being a valued part of the Emmalord Educational Complex community.
+        </p>
+    </div>
+      <div class="container">
+        <h2>Submit a Complaint</h2>
+        <form action="process_complain.php" method="post">
+          <label for="parent_name">Your Name:</label>
+          <input type="text" id="parent_name" name="parent_name" required />
+    
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+    
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required />
+    
+          <label for="complaint">Complaint:</label>
+          <textarea id="complaint" name="complaint" rows="4" required></textarea>
+    
+          <input type="submit" value="Submit Complaint" />
+        </form>
+      </div>    
+        </form>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const hamburgerMenu = document.querySelector(".hamburger-menu");
+            const navList = document.querySelector(".nav-list");
+    
+            hamburgerMenu.addEventListener("click", function () {
+              navList.classList.toggle("show");
+            });
+          });
+        </script>
+        <style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+        </style>
+      
+        </div>
+        <div class="footer-container">
+          <div class="footer">
+            <div class="footer-section">
+              <div class="logo">
+                <img src="Emmalord.jpg" alt="Logo" />
+              </div>
+              <div class="contact-info">
+                <p>Contact Information:</p>
+                <p>
+                  <a href="mailto:brempongkumi1@gmail.com"
+                    >Email: emmalordeducation7@gmail.com</a
+                  >
+                </p>
+                <p>Location: Sunyani-Dumasua</p>
+                <p>Call us on: <a href="tel:0534655641">0534655641</a></p>
+              </div>
+            </div>
+    
+            <div class="footer-section explore">
+              <h3>Explore</h3>
+              <a href="index.html">Home</a>
+              <a href="ABOUT  US.HTML">About Us</a>
+              <a href="enquiries.html">Equiries</a>
+            </div>
+    
+            <div class="footer-section quick-links">
+              <h3>Quick Links</h3>
+              <a href="ADMISSIONS.HTML">Requirements</a>
+              <a href="clubs.html">Clubs</a>
+              <a href="src.html">SRC</a>
+              <a href="complains.html">Complains</a>
+            </div>
+            <div class="footer-section">
+              <h3>Connect with Us</h3>
+              <div class="social-icons">
+                <a
+                  href="https://web.facebook.com/profile.php?id=100072368995853"
+                  target="_blank"
+                  ><i class="fa fa-facebook"></i
+                ></a>
+                <a href="https://twitter.com/KumiObrempong" target="_blank"
+                  ><i class="fa fa-twitter"></i
+                ></a>
+                <a href="https://www.instagram.com/anibrekumi/" target="_blank"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+                <a
+                  href="https://wa.link/xkyqb1"
+                  target="_blank"
+                  class="fa fa-whatsapp"
+                ></a>
+              </div>
+            </div>
+            <div class="copyright">&copy; 2023 Emmalord Educational Complex</div>
+          </div>
+        </div>
+  </body>
+</html>
